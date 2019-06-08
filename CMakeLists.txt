@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
+
+
+#
+# Configure CMake environment
+#
+
+
+# Include cmake modules
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+
+
+# Define Project
+set(RUSHMORE_VERSION 0.0.1.0)
+project(rushmore)
+
+# Add project modules
+add_subdirectory(project/core)
+#add_subdirectory(project/components)
+#add_subdirectory(project/engine)
+#add_subdirectory(project/toolset)
