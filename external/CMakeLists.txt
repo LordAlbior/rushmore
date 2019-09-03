@@ -34,3 +34,21 @@ if(NOT extern_glfw_POPULATED)
             ${extern_glfw_BINARY_DIR}
             EXCLUDE_FROM_ALL)
 endif()
+
+# ------------------------------------------------------------------------------
+# Cross-platform asynchronous I/O
+# http://libuv.org
+FetchContent_Declare(
+        extern_libuv
+        GIT_REPOSITORY https://github.com/libuv/libuv.git
+        GIT_TAG v1.31.0)
+
+FetchContent_GetProperties(extern_libuv)
+if(NOT extern_libuv_POPULATED)
+    FetchContent_Populate(extern_libuv)
+    add_subdirectory(
+            ${extern_libuv_SOURCE_DIR}
+            ${extern_libuv_BINARY_DIR}
+            EXCLUDE_FROM_ALL)
+endif()
+
