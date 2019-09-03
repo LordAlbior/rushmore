@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.14..3.15 FATAL_ERROR)
 
 
 #
@@ -9,6 +9,7 @@ cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
 # Include cmake modules
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 
+include(config)
 
 # Define Project
 set(RUSHMORE_VERSION 0.0.1.0)
